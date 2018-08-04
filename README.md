@@ -9,3 +9,5 @@ Have its own repository under your GitHub account (do not fork this repo).
 Be deployed to Heroku.
 Have validated, semantically-clean HTML and CSS and a polished appearance.
 Demonstrate a good commit history.
+
+based on original source from https://github.com/mschwarzmueller/nodejs-shopping-cart-tutorial
