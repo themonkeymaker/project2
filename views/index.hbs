@@ -1,0 +1,34 @@
+<div class="row">
+    <h1>Charities</h1>
+    {{#each charities as |charity|}}
+    <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+            <a href="{{charity.imageURL}}">
+                <img src="{{charity.imageURL}}" alt="..." class="img-responsive">
+            </a>
+            <div class="caption">
+                <a href="/charity/{{charity._id}}/">
+                    <h3>{{charity.name}}</h3>
+                </a>
+                <p class="description">{{charity.description}}</p>
+                <div class="clearfix">
+                    <form action="/donations/" method="post" accept-charset="utf-8">
+                        <input name="charity" type="hidden" value="{{charity._id}}">
+                        <div class="input-group">    
+                            <select class="form-control" name="amount">
+                                <option value=5>$5</option>
+                                <option value=10>$10</option>
+                                <option value=15>$15</option>
+                                <option value=20>$20</option>
+                            </select>
+                            <span class="input-group-btn">
+                                <input class="btn btn-success pull-right" type="submit" value="Donate Now" />
+                            </span>
+                        </div>
+                      </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>
