@@ -4,7 +4,9 @@
   "description": "Donation app",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "preinstall": "npm seed",
+    "start": "node ./bin/www",
+    "seed": "node db/seed.js"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
