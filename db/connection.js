@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-mongoose.connect("mongodb://localhost/donationcart");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/donationcart");
 
 mongoose.Promise = Promise;
 
