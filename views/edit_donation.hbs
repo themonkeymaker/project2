@@ -1,0 +1,14 @@
+<h2>Edit ${{donation.amount}} Donation for {{donation.charity.name}}</h2>
+
+<form action="/donations/edit/{{donation._id}}" method="post">
+  <p>
+    <label>Amount:</label>
+    <select class="form-control" name="amount">
+        <option value=5>$5</option>
+        <option value=10>$10</option>
+        <option value=15>$15</option>
+        <option value=20>$20</option>
+    </select>
+  </p>
+  <input class="btn btn-primary" type="submit" value="Update" />
+</form>
